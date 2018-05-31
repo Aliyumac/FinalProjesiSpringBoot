@@ -33,11 +33,9 @@ public class RESTServisiOrnek {
 	public synchronized Ogrenci ogrenciOlustur(String ad, String soyad) {
 		return ogrenciEkle(ogrenciler, ad, soyad);
 	}
-	
 	@RequestMapping(value="/ogrenci/olustur/post",method = RequestMethod.POST)
 	public synchronized Ogrenci ogrenciOlusturPost(String ad, String soyad) {
-		return ogrenciEkle(ogrenciler, ad, soyad);
-	}
+		return ogrenciEkle(ogrenciler, ad, soyad);}
 	
 	protected Ogrenci ogrenciEkle(List<Ogrenci> liste, String ad, String soyad) {
 		Ogrenci ogrenci = new Ogrenci();
@@ -45,5 +43,4 @@ public class RESTServisiOrnek {
 		ogrenci.soyad=soyad;
 		liste.add(ogrenci);
 		return ogrenci;
-	}
-}
+	} }
